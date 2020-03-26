@@ -2,6 +2,8 @@ import React from "react";
 
 import "./App.css";
 import NASA from "./components/NASA/NASA";
+import WeatherApi from "./components/Weather/Weather";
+
 let lat = document.getElementById("lat").innerHTML;
 let lon = document.getElementById("lon").innerHTML;
 lat = +lat;
@@ -15,16 +17,6 @@ class App extends React.Component {
       </div>
     );
   }
-import WeatherApi from './components/Weather/Weather'
-
-function App() {
-  return (
-    <div className="App">
-      <p>Test</p>
-      <WeatherApi/>
-      
-    </div>
-  );
 }
 
 export default App;

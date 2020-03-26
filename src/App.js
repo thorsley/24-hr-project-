@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import NASA from "./components/NASA/NASA";
 import WeatherApi from "./components/Weather/Weather";
+import ZomatoApi from "./components/Zomato/Zomato";
 
 let lat = document.getElementById("lat").innerHTML;
 let lon = document.getElementById("lon").innerHTML;
@@ -14,6 +15,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <NASA lat={lat} lon={lon} />
+        <ZomatoApi lat={lat} lon={lon}/>
       </div>
     );
   }

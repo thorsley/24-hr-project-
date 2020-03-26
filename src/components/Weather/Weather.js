@@ -1,27 +1,34 @@
-import React, { Component } from "react";
+import React from "react";
 
-class WeatherApi extends Component {
-  constructor() {
-    super();
+let key = "f340f1de73f3193cb855cbcda23ece38";
+
+class WeatherApi extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
-      data: null
+      temp: "",
+      lon: props.lon,
+      lat: props.lat
     };
   }
-
-  // https://openweathermap.org/current Api doc link
-
-  //fetchs data from api based on lon & lat.  Daleville indiana lat and lon in currently
-
   componentDidMount() {
+    //&units=Imperial fetchs the temp as F instead of C which is default.
     fetch(
-      "api.openweathermap.org/data/2.5/weather?lat=40.1212&lon=85.5580&appid=f340f1de73f3193cb855cbcda23ece38"
-    ).then(res => {
-      res.json();
-      console.log(res);
-    });
+      `https://api.openweathermap.org/data/2.5/weather?lat=${this.state.lat}&lon=${this.state.lon}&units=Imperial&appid=${key}`
+    )
+      .then(response => response.json())
+      .then(json => {
+        this.setState({
+          temp: json.main.temp
+        });
+      });
   }
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <p>{Math.round(this.state.temp)}</p>
+      </div>
+    );
   }
 }
 

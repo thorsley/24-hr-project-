@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./App.css";
 import NASA from "./components/NASA/NASA";
 let lat = document.getElementById("lat").innerHTML;
@@ -14,6 +15,16 @@ class App extends React.Component {
       </div>
     );
   }
+import WeatherApi from './components/Weather/Weather'
+
+function App() {
+  return (
+    <div className="App">
+      <p>Test</p>
+      <WeatherApi/>
+      
+    </div>
+  );
 }
 
 export default App;

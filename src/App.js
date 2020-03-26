@@ -1,13 +1,19 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import NASA from "./components/NASA/NASA";
+let lat = document.getElementById("lat").innerHTML;
+let lon = document.getElementById("lon").innerHTML;
+lat = +lat;
+lon = +lon;
 
-function App() {
-  return (
-    <div className="App">
-      <p>Test</p>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <NASA lat={lat} lon={lon} />
+      </div>
+    );
+  }
 }
 
 export default App;

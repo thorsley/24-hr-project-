@@ -14,6 +14,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <NASA lat={lat} lon={lon} />
+        <WeatherApi lat={lat} lon={lon} />
       </div>
     );
   }

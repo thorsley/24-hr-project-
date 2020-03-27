@@ -1,3 +1,13 @@
 .titleCard {
     padding: 30px;
 }
+.cardBox{
+    display: flex;
+    max-width: 496px;
+    margin: 0 auto;
+}
+.scroll{
+    overflow: scroll;
+    max-height:80vh;    
+    margin-top: 5em;
+}

@@ -15,8 +15,8 @@ class App extends React.Component {
     return (
       <div className="App">
         {lat === 0 ? null : <NASA lat={lat} lon={lon} />}{" "}
+         {/* <WeatherApi lat={lat} lon={lon} />  */}
         <ZomatoApi lat={lat} lon={lon} />
-        <WeatherApi lat={lat} lon={lon} />
       </div>
     );
   }

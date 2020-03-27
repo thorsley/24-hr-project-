@@ -1,6 +1,10 @@
 import React from "react";
 
+
+
+
 let key = "f340f1de73f3193cb855cbcda23ece38";
+
 
 class WeatherApi extends React.Component {
   constructor(props) {
@@ -25,6 +29,7 @@ class WeatherApi extends React.Component {
   }
   componentDidUpdate() {
     //&units=Imperial fetchs the temp as F instead of C which is default.
+
 
     {
       this.state.tempUnit

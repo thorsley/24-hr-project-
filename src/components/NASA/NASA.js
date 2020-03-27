@@ -12,6 +12,8 @@ class NASA extends React.Component {
     };
   }
   componentDidMount() {
+    console.log("mounted");
+    console.log(this.state.lon);
     fetch(
       `https://api.nasa.gov/planetary/earth/imagery?lon=${this.state.lon}&lat=${this.state.lat}&api_key=${key}`
     )

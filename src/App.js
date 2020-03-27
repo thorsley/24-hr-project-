@@ -13,7 +13,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <NASA lat={lat} lon={lon} />
+        {lat === 0 ? null : <NASA lat={lat} lon={lon} />}
         <WeatherApi lat={lat} lon={lon} />
       </div>
     );
